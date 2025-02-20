@@ -3,41 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mudi asks you to be his Valentine</title>
+  <title>Our Valentine Memories 💖</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="letter">
-    <h1>My Dearest Oriaku,</h1>
-    
-    <p>Will you be my Valentine?</p>
+  <header>
+    <h1>Thank You for a Beautiful Valentine’s Weekend 💕</h1>
+    <p>💖 This is my way of cherishing every beautiful moment we've shared. I want us to create countless more memories together, each one even more special than the last. Forever yours, Mudi. ❤️</p>
+  </header>
 
-    <p>Now, before you answer, let me list a few reasons why this is a fantastic idea:</p>
-
-    <ul>
-      <li>I promise to share my snacks with you (even the last slice of pizza, if I’m feeling generous).</li>
-      <li>I’ll laugh at your jokes, even the ones that aren’t funny.</li>
-      <li>I’ll even let you win at Mortal Kombat… maybe.</li>
-    </ul>
-
-    <p>In return, all I ask is that you tolerate my weirdness, my occasional awkwardness, 
-       and my inability to decide what to eat for dinner.</p>
-
-    <p>So, what do you say? Will you be my Valentine and make this February 14th the cheesiest, 
-       most love-filled day of the year? I promise it’ll be fun, full of laughter, and maybe even a little bit of chocolate.</p>
-
-       <h2><span class="typing">Will you be my Valentine?</span></h2>
-
-    <div class="buttons">
-      <button id="yesButton">Yes</button>
-      <button id="noButton">No</button>
+  <section class="slideshow">
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="images/Wine Glass.jpg" alt="Wine Glass">
+        <p class="caption">Dinner Date 🍷</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/Kiss.jpg" alt="Kiss">
+        <p class="caption">My View ❤️</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/Mirror.jpg" alt="Holding Hands">
+        <p class="caption">Hand in Hand 🤝</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/Mudi.jpg" alt="Tiana Wine Glass">
+        <p class="caption">Your View ❤️</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/MudiView.jpg" alt="Candle Light Dinner">
+        <p class="caption">Romantic Dinner ✨</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/Tiana Wine Glass.jpg" alt="Sunset Walk">
+        <p class="caption">Cute 🥹</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/Cups.jpg" alt="Laughter Together">
+        <p class="caption">Pure Joy 😂</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/feet.jpg" alt="Laughter Together">
+        <p class="caption">👀👀👀</p>
+      </div>
+      <div class="slide fade">
+        <img src="images/Holding.jpg" alt="Laughter Together">
+        <p class="caption">Pure Joy 😂</p>
+      </div>
+      <!-- Slideshow navigation buttons -->
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
+  </section>
 
-    <p id="responseMessage" class="hidden"></p>
+  <!-- Play/Pause Button -->
+<button id="toggleSlideshow">⏸ Pause Slideshow</button>
+
+  <!-- Slide Navigation Dots -->
+<div class="dots-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+</div>
+
+
+  <!-- Lightbox Modal for Enlarged Images -->
+  <div id="lightbox" class="hidden">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+    <p id="lightbox-caption"></p>
   </div>
-  
-  <div class="hearts-container"></div>
-  <script src="script.js"></script>
 </body>
 </html>
