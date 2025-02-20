@@ -7,8 +7,9 @@ body {
   animation: gradientMove 10s infinite alternate ease-in-out;
   margin: 0;
   padding: 20px;
-  overflow: hidden;
+  overflow-y: auto;
   position: relative;
+  min-height: 100vh;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
@@ -157,4 +158,25 @@ p {
   font-size: 24px;
   color: #e91e63;
   animation: floatHearts 6s infinite ease-in-out;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .slideshow-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .prev, .next {
+    font-size: 16px;
+    padding: 5px;
+  }
 }
